@@ -16,7 +16,7 @@ Blogify is a modern, full-featured blogging platform built with cutting-edge web
 
 - **User Authentication**: Uses JWT for authentication.
 - **Create Blogs/ Edit Blogs**: Users can create or edit their blogs.
-- **Explore Blogs**: Users can see the blogs listings created by various authors.
+- **Explore Blogs**: Users can see the blogs listings created by various authors, like and comment on blogs.
 - **Responsive Design**: The application is optimized for desktop and mobile devices.
 
 ## Technologies Used:
@@ -44,7 +44,6 @@ Blogify is a modern, full-featured blogging platform built with cutting-edge web
 
 - **Blogs**
   - `GET /api/blogs`: Fetches all the blogs.
-  - `GET /api/blogs?category=:category&author=:author`: Filter's the blogs by category, author or both.
   - `POST /api/blogs`: Create a blog.
   - `PUT /blogs/:id`: Update a blog.
   - `DELETE /blogs/:id`: Deletes a blog.
