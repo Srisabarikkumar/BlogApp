@@ -10,6 +10,7 @@ Blogify is a modern, full-featured blogging platform built with cutting-edge web
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
+- [Installation and setup](#installation-and-setup)
 - [License](#license)
 
 ## Features:
