@@ -24,16 +24,16 @@ const MyBlogs = () => {
         <img src={notebook} className="size-52 object-cover" alt="welcome" />
       </div>
       {!isBlogsLoading && myBlogs.length === 0 ? (
-        <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row py-20 px-10">
-          <div className="flex-1 lg:flex gap-4 items-center justify-center">
+        <div className="max-w-screen-xl mx-auto py-20 px-10">
+          <div className="flex-1 gap-4 items-center justify-center">
             <img src={createBlogImg} className="max-h-96" alt="createBlog" />
-            <div className="p-4">
+            <div className="p-4 flex flex-col items-center">
               <p className="text-xl font-semibold py-4">
                 U haven't created any blogs yet!.{" "}
               </p>
               <Link to="/create-blog">
                 <button className="btn rounded-full btn-primary btn-outline">
-                  Create Blog
+                  Create a Blog
                 </button>
               </Link>
             </div>

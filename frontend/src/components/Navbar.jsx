@@ -3,6 +3,7 @@ import useAuthStore from "../store/useAuthStore";
 import { CgProfile } from "react-icons/cg";
 import { MdLogout } from "react-icons/md";
 import { ImBlog } from "react-icons/im";
+import { IoMdCreate } from "react-icons/io";
 
 const Navbar = () => {
   const { logout } = useAuthStore();
@@ -14,6 +15,11 @@ const Navbar = () => {
       </Link>
 
       <div className="flex gap-2">
+         <Link to="/create-blog">
+            <button className="btn lg:hidden rounded-full bg-inherit btn-secondary">
+              <IoMdCreate />
+            </button>
+          </Link>
         <Link to="/my-profile">
           <button className="btn rounded-full bg-inherit btn-secondary">
             <CgProfile className="size-5" />

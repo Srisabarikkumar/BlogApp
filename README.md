@@ -30,24 +30,65 @@ Blogify is a modern, full-featured blogging platform built with cutting-edge web
 ## Usage:
 
 1. **Sign Up/Log In**: Signup / Login.
-2. **View Blogs**: View Blogs of other users.
+2. **View Blogs**: View Blogs of other users, like and comment on those blogs.
 3. **Create Blogs**: Create your own blogs.
 4. **Manage your blogs**: Edit or delete your blogs.
+
+## Installation and setup:
+
+1. Clone the repository:
+    ```bash
+    git clone <repository-url>
+    cd blogapp
+    ```
+    
+2. Setup the backend:
+    ```bash
+    cd backend
+    npm install
+    ```
+
+3. Create a .env file:
+    ```bash
+    PORT=5000
+    MONGO_URI=your_mongodb_connection_string
+    JWT_SECRET=your_jwt_secret_key
+    ```
+    Start the server with nodemon:
+    ```
+    nodemon src/index.js
+    ```
+
+4. Setup the frontend:
+    ```
+    cd frontend
+    npm install
+    npm run dev
+    ```
+
+5. Access the application:
+    ```
+    http://localhost:5173
+    ```
 
 ## API Endpoints:
 
 - **Authentication**
-  - `POST /api/auth/signup`: Register a user.
+  - `POST /api/auth/register`: Register a user.
   - `POST /api/auth/login`: Logs the user in.
   - `POST /api/auth/logout`: Logs out the user.
-  - `GET /api/auth/check`: Fetches the currently authenticated user.
+  - `GET /api/auth/check`: Fetches the authenticated user.
+  - `GET /api/auth/profile`: Fetches the authenticated user's profile.
 
 - **Blogs**
   - `GET /api/blogs`: Fetches all the blogs.
   - `POST /api/blogs`: Create a blog.
-  - `PUT /blogs/:id`: Update a blog.
-  - `DELETE /blogs/:id`: Deletes a blog.
-  - `GET /blogs/myblogs`: Fetches the authenticated user's blogs.
+  - `GET /api/blogs/:id`: Get blog by Id.
+  - `PUT /api/blogs/:id`: Edit/Update a blog.
+  - `DELETE /api/blogs/:id`: Deletes a blog.
+  - `GET /api/blogs/myblogs`: Fetches the authenticated user's blogs.
+  - `GET /api/blogs/comment/:id`: Comment on user's blog.
+  - `GET /api/blogs/like/:id`: Like or Unlike a blog.
 
 ## License
 
