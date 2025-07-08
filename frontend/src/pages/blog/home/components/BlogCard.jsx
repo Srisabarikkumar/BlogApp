@@ -1,4 +1,4 @@
-import { Card, Avatar, Tag } from "antd";
+import { Avatar } from "antd";
 import { BookOutlined } from "@ant-design/icons";
 import { formatBlogDate } from "../../../../lib/date";
 import { FaComment } from "react-icons/fa";
