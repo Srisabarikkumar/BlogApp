@@ -45,7 +45,7 @@ const useAuthStore = create((set) => ({
       toast.success(`Welcome back ${response.data.name}`);
     } catch (error) {
       toast.error("Invalid credentials");
-      set({ error: error.response.data.message });
+      set({ error: error.response?.data?.message });
     } finally {
       set({ isLoggingIn: false, error: null });
     }
