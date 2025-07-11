@@ -10,17 +10,10 @@ const useBlogStore = create((set, get) => ({
   isCommenting: false,
   isLiking: false,
 
-  getBlogs: async (filters = {}) => {
+  getBlogs: async () => {
     set({ isBlogsLoading: true });
     try {
-      const query = new URLSearchParams();
-      if (filters.category && filters.category !== "all") {
-        query.append("category", filters.category);
-      }
-      if (filters.author && filters.author !== "all") {
-        query.append("author", filters.author);
-      }
-      const response = await axiosInstance.get(`/blogs?${query.toString()}`);
+      const response = await axiosInstance.get("/blogs");
       set({ blogs: response.data });
     } catch (error) {
       set({ error: error.response?.data?.message });
@@ -89,6 +82,7 @@ const useBlogStore = create((set, get) => ({
     try {
       const response = await axiosInstance.post(`blogs/comment/${blogId}`, { text });
       set({ blog: response.data });
+      toast.success("Comment added successfully");
     } catch (error) {
       set({ error: error.response?.data?.message });
     } finally {
