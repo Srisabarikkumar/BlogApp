@@ -88,7 +88,7 @@ const Blog = () => {
               )}
               {blog?.author}
             </p>
-            <p className="text-sm flex gap-5 items-center text-gray-500 mb-3">
+            <div className="text-sm flex gap-5 items-center text-gray-500 mb-3">
               # {blog?.category}
               <div
                 className="flex gap-1 items-center group cursor-pointer"
@@ -110,7 +110,7 @@ const Blog = () => {
                   {blog?.likes?.length}
                 </span>
               </div>
-            </p>
+            </div>
           </div>
           <div className="tiptap prose max-w-none">
             <ReadOnlyBlog content={blog?.content} />
